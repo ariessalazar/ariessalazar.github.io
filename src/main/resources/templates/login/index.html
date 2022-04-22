@@ -9,7 +9,7 @@
 <div th:replace="fragments/header :: headerUnauthenticated"></div>
 <main>
     <div class="container">
-        <h1 class="mt-5">Login</h1>
+        <h1 class="mt-5" >Login</h1>
         <form th:method="POST" th:action="@{~/login}" th:object="${user}">
             <div class="mb-3">
                 <label for="emailAddress" class="form-label">Email Address</label>

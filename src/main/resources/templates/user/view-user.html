@@ -24,7 +24,14 @@
                 <label for="emailAddress" class="form-label">Email Address</label>
                 <input type="email" class="form-control" id="emailAddress" th:field="*{emailAddress}" placeholder="jd@gmail.com">
             </div>
-
+            <div class="mb-3">
+                <label for="role" class="form-label">Role</label>
+                <select id="role" class="form-control" th:field="*{role}">
+                    <option th:value="ROLE_EMPLOYEE">Employee</option>
+                    <option th:value="ROLE_ADMIN">Admin</option>
+                    <option th:value="ROLE_CUSTOMER">Customer</option>
+                </select>
+            </div>
             <button type="submit" class="btn btn-outline-primary">Update User</button>
         </form>
 
