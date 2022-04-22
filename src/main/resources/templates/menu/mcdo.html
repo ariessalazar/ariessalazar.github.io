@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>MCDO</title>
+</head>
+<body>
+<div th:replace="fragments/header :: headerAuthenticated"></div>
+
+<div class="small-container">
+    <div class=" row row-2">
+        <h2> Recommended for you  </h2>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<!-----products---->
+<div class="small-container">
+    <div class="row">
+        <div class="col-4">
+            <img src="https://d3bjzufjcawald.cloudfront.net/public/web/2019-03-06/bb6b6849bd80a9e8629b9a95cd5af8f6/BurgerMcDo-500.jpeg">
+            <h4>Burger Mcdo</h4>
+            <h4 class="p-price">PHP 500.00</h4>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="col-4">
+            <img src="https://d3bjzufjcawald.cloudfront.net/public/web/2019-03-06/aa64f2236638b62ff0c5d945882d8e59/Cheeseburger-500.jpeg">
+            <h5 class="p-name">Cheese Burger</h5>
+            <h4 class="p-price">PHP 5000.00</h4>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="col-4">
+            <img src="https://d3bjzufjcawald.cloudfront.net/public/web/2019-03-07/c2d1a3e3105c5c4300d56aee09cdb07b/1pcChickenSpag-500.jpeg">
+            <h4>1pc chicken Mcdo with McSpaghetti</h4>
+            <h4 class="p-price">PHP 5000.00</h4>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="col-4">
+            <img src="https://d3bjzufjcawald.cloudfront.net/public/web/2019-03-07/6aad5423d0049347a8b0181176d04997/6pcNuggestswFries-500.jpeg">
+            <h4>6pc. Chicken Mcnuggets with fries</h4>
+            <h4 class="p-price">PHP 5000.00</h4>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="col-4">
+            <img src="https://d3bjzufjcawald.cloudfront.net/public/web/2019-03-07/817e1df4c7171d3756e9b469dbf8f7c0/McCafe-Capuccino-500.jpeg">
+            <h4>McCafé Capuccino</h4>
+            <h4 class="p-price">PHP 5000.00</h4>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="col-4">
+            <img src="https://d3bjzufjcawald.cloudfront.net/public/web/2019-03-07/4b60c2f1dc0949145333b99156f94744/McCafe-CafeLatte-500.jpeg">
+            <h4>McCafé Cafe Latte</h4>
+            <h4 class="p-price">PHP 5000.00</h4>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="col-4">
+            <img src="https://d3bjzufjcawald.cloudfront.net/public/web/2019-03-07/e284387a73feba59d599d65dc327976a/Fries-500.jpeg">
+            <h4>Fries</h4>
+            <h4 class="p-price">PHP 5000.00</h4>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="col-4">
+            <img src="https://d3bjzufjcawald.cloudfront.net/public/web/2019-03-06/823208d6b310b40b9c6365d5d0cbe87c/SausagePlatterWithRice-500.jpeg">
+            <h4>Sausage Platter with Rice</h4>
+            <h4 class="p-price">PHP 5000.00</h4>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="col-4">
+            <img src="https://d3bjzufjcawald.cloudfront.net/public/web/2019-03-13/0850e85828b8364d0ced4dd0fa4bfd5f/McFlurrywithOreo-500.jpeg">
+            <h4>Mcflurry with oreo cookies</h4>
+            <h4 class="p-price">PHP 5000.00</h4>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="col-4">
+            <img src="https://d3bjzufjcawald.cloudfront.net/public/web/2019-03-06/ce3ae2068adae34a2b2b9e317fdfb6b8/SausageMcMuffinWithEgg-500.jpeg">
+            <h4>Sausage McMuffin with Egg</h4>
+            <h4 class="p-price">PHP 5000.00</h4>
+            <!--<a class="nav-link" th:href="@{order-confirmation}">Orders</a>-->
+            <a th:href="@{order-confirmation}"  class="btn btn-primary">Buy Now</a>
+        </div>
+    </div>
+</div>
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>

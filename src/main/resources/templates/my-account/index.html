@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>My Account Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./myaccount.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <div th:replace="fragments/header :: headerAuthenticated"></div>
+</head>
+<body>
+<main>
+    <div class="container">
+        <h1 class="mt-5">My account</h1>
+        <!--<form th:method="PUT" th:action="@{/templates/my-account}" th:object="${user}">-->
+
+            <!--<div th:type="hidden" th:field="*{#authentication.principal.id}"></h3></div>
+                   <div th:each="user : ${users}">-->
+                      <!-- <h3>First Name: <input type="text" class="form-control" th:field="${user.firstName}"></h3>-->
+                <h3>User ID: <span th:text="${#authentication.principal.id}"/></h3>
+
+                <h3>First Name: <span th:text="${#authentication.principal.firstName}"/></h3>
+
+                <h3>Last Name:  <span th:text="${#authentication.principal.lastName}"/></h3>
+
+                <h3>Email Address:  <span th:text="${#authentication.principal.emailAddress}"/></h3>
+
+                <h3>User Type: <span th:text="${#authentication.principal.role}"/></h3>
+                   </div>
+                    <div   th:each="user : ${users}">
+                <a href class="btn btn-primary" th:href="@{~/user/{id}(id=${user.id})}">Edit account</a>
+                    </div>
+       <!-- <form class="mt-1" th:method="delete" th:action="@{~/my-account}">
+            <input type="hidden" name="id" th:value="${user.id}">
+            <button type="submit" class="btn btn-danger">Delete account</button>
+        </form>-->
+
+            </tbody>
+        </table>
+    </div>
+</main>
+<!--<div class="btn">
+    <span class="fas fa-bars"></span>
+</div>
+<nav class="sidebar">
+    <div class="text">Side Menu</div>
+    <ul>
+        <li>
+            <a href="#" class="sell-btn"><i class="fas fa-cart-plus"></i>Restaurants</a>
+            <ul class="sell-show">
+                <li><a href="laptop.jsp">Mcdonalds</a></li>
+                <li><a href="clothes.jsp">KFC</a></li>
+                <li><a href="#"><i class="fa-solid fa-burger-cheese"></i>Burger King</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="acct-btn"><i class="fas fa-user-circle"></i>My Account</a>
+            <ul class="acct-show">
+                <li><a href="#">Personal Info</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><i class="fas fa-concierge-bell"></i>Services</a>
+        <li><a href="#"><i class="fas fa-exclamation-triangle"></i>Logout</a>
+    </ul>
+</nav>
+<script>
+    $('.btn').click(function(){
+        $(this).toggleClass("click");
+        $('.sidebar').toggleClass("show");
+    });
+    $('.sell-btn').click(function(){
+        $('nav ul .sell-show').toggleClass("show");
+    });
+    $('.acct-btn').click(function(){
+        $('nav ul .acct-show').toggleClass("show1");
+    });
+    $('nav ul li').click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+    });
+</script>-->
+
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>

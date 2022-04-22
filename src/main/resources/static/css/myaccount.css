@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+
+*{
+    margin:0;
+    padding:0;
+    user-select: none;
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Roboto' , sans-serif;
+
+}
+.btn{
+    position: absolute;
+    left: 45px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    background: #1b1b1b;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: left 0.4s ease;
+}
+.btn.click{
+    left: 260px;
+}
+.btn span{
+    color: white;
+    font-size: 28px;
+    line-height: 45px;
+}
+.btn.click span:before{
+    content: '\f00d';
+}
+.sidebar{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: -250px;
+    background: #1b1b1b;
+}
+.sidebar.show{
+    left: 0px;
+}
+.sidebar .text{
+    color: aqua;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 65px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+nav ul li{
+    line-height:60px;
+    border-bottom: 1px solid red;
+}
+nav ul li a{
+    color: aqua;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 40px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left:3px solid transparent;
+}
+nav ul li active.a{
+    color: cyan;
+    background:  #1e1e1e;
+    border-left-color: cyan;
+}
+nav ul ul{
+    position: static;
+    display: none;
+}
+nav ul .sell-show.show{
+    display: block;
+}
+nav ul .acct-show.show1{
+    display: block;
+}
+nav ul ul li {
+    line-height: 42px;
+    border-bottom: none;
+}
+nav ul ul  li a{
+    font-size: 17px;
+    color: #e6e6e6;
+    padding-left: 80px;
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    height: 840px;
+    justify-content: top;
+    align-items: center;
+    color: #0000ff	;
+}
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('sell.jpg') no-repeat center center/cover;
+    height: 900px;
+    width: 100%;
+    z-index: -1;
+}

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Questrial&display=swap');
+
+.text {
+    text-align: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body .body1 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e6e6e6;
+
+}
+section .card .image{
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    padding: 3px;
+    background: burlywood;
+}
+
+section .card .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff
+}
+.card{
+    position: relative;
+    background: #ffffff;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+.card::before{
+    content: "";
+    position: absolute;
+    height: 40%;
+    width: 100%;
+    background: brown;
+    border-radius: 20px 20px 0 0;
+}
+.card .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    z-index: 100;
+}
+.card .media-icons i{
+    color: #e6e6e6;
+    opacity: 0.6;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.card .media-icons i:hover{
+    opacity: 1;
+}
+.card .Name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    color: #1b1b1b;
+}
+.Name-price .name{
+    font-size: 20px;
+    font-weight: 600;
+}
+.card .star{
+    display: flex;
+    align-items: center;
+    margin: 18px;
+}
+
+.card .star i{
+    font-size: 18px;
+    margin: 0 2px;
+    color: brown;
+}
+.card .button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.card .button button{
+    background: brown;
+    outline: none;
+    border: none;
+    color: #e6e6e6;
+    padding: 8px 22px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+.button button:hover{
+    background: brown;
+}
+.swiper{
+    width: 950px;
+}
